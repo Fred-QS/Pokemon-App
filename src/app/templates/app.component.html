@@ -17,21 +17,12 @@
     <li *ngFor="let pokemon of pokemonList">{{ pokemon.name }}</li>
 </ul>-->
 
-<h1 class='center'>Pokemons</h1>
-<div class='container'>
-    <div class="row">
-        <div *ngFor='let pokemon of pokemonList' class="col s6 m4">
-            <div class="card horizontal" (click)="selectPokemon(pokemon)" appBorderCard>
-                <div class="card-image">
-                    <img [src]="pokemon.picture" [alt]="pokemon.name">
-                </div>
-                <div class="card-stacked">
-                    <div class="card-content">
-                        <p>{{ pokemon.name }}</p>
-                        <p><small>{{ pokemon.created }}</small></p>
-                    </div>
-                </div>
-            </div>
-        </div>
+<nav>
+    <div class="nav-wrapper teal">
+        <a href="/" class="brand-logo center">
+            Pokedex
+        </a>
     </div>
-</div>
+</nav>
+
+<router-outlet></router-outlet>
